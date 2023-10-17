@@ -8,8 +8,9 @@ Git (for cloning the repository)<br />
 # Getting Started
 Clone the repository:
 ```bash
-# git clone https://github.com/OuroborosW/Golang-GraphQL-Vue.git
-# cd Golang-GraphQL-Vue
+git clone https://github.com/OuroborosW/Golang-GraphQL-Vue.git
+cd Golang-GraphQL-Vue
+```
 Start MongoDB with Docker:
 Make sure Docker and Docker Compose are properly installed on your system. Run the following command to start a MongoDB container:
 
