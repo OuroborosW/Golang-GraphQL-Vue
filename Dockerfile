@@ -14,16 +14,19 @@ RUN go mod download
 COPY . .
 
 # Build the application.
-RUN go build -o main .
+RUN go build -o /app/main .
 
-# Use the alpine-based distribution of Go for a smaller final image.
-FROM golang:1.17-alpine
+# Use a minimal alpine-based distribution for a smaller final image.
+FROM alpine:latest
 
 # Set the working directory inside the container.
 WORKDIR /app
 
 # Copy the binary from the builder stage.
 COPY --from=builder /app/main /app/main
+
+# Give execute permissions to the binary.
+RUN chmod +x /app/main
 
 # Expose port 8080 to the outside world.
 EXPOSE 8080
