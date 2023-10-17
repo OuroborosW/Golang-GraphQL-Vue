@@ -1,0 +1,11 @@
+# Go
+bin/
+pkg/
+
+# IDEs
+.idea/
+
+# System Files
+.DS_Store
+*.log
+*.iml
