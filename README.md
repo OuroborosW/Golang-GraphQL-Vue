@@ -8,7 +8,7 @@ Git (for cloning the repository)<br />
 # Getting Started
 **Clone the front-end repository:**
 ```bash
-git clone https://github.com/OuroborosW/ue-frontend.git
+git clone https://github.com/OuroborosW/vue-frontend.git
 ```
 **Clone the repository:**
 ```bash
