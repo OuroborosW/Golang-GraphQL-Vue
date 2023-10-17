@@ -19,33 +19,33 @@ docker-compose up -d
 ```
 **Initialize the database:**
 This step involves populating the MongoDB with the provided states.json data.
-
+```
 bash
-Copy code
 go run initdata.go
-Run the GraphQL server:
+```
+**Run the GraphQL server:**
 Navigate to the main directory:
-
+```
 bash
-Copy code
 cd main
+```
 Then run:
-
+```
 bash
-Copy code
 go run *.go
+```
 The server will start, and the GraphQL endpoint will be available at http://localhost:8080/graphql.
 
-Use the GraphQL API:
+**Use the GraphQL API:**
 To fetch state names, send a POST request to the GraphQL endpoint with a query like:
-
+```
 graphql
-Copy code
 {
   search(input: "A") {
     name
   }
 }
+```
 This will return all state names starting with the letter 'A'.
 
 Development
