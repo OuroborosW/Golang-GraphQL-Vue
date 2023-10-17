@@ -7,6 +7,5 @@ COPY go.mod /app
 COPY go.sum /app
 
 RUN go mod download
-RUN go get github.com/githubnemo/CompileDaemon
-COPY . /app
-ENTRYPOINT CompileDaemon --build="go build -o main" --command=./main
+RUN go build -o main .
+RUN chmod +x main
