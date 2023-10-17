@@ -1,11 +1,6 @@
 version: '3'
 
 services:
-  frontend:
-    build: ../vue-frontend/  # 指向前端项目的路径
-    ports:
-      - "8080:8080"  # 前端的端口
-
   backend:
     build: .  # 使用当前目录作为后端项目的路径
     ports:
@@ -14,6 +9,11 @@ services:
       - mongodb
     environment:
       - MONGO_URI=mongodb://mongodb:27017
+
+  frontend:
+    build: ../vue-frontend/  # 指向前端项目的路径
+    ports:
+      - "8080:8080"  # 前端的端口
 
   mongodb:
     image: mongo:latest
