@@ -1,23 +1,32 @@
-# Use the official Go image as a parent image
-FROM golang:1.17
+# Use the official Go image to create a build artifact.
+FROM golang:1.17 AS builder
 
-# Set the current working directory inside the container
+# Set the working directory inside the container.
 WORKDIR /app
 
 # Copy go mod and sum files
 COPY go.mod go.sum ./
 
-# Download all dependencies. If they exist in your project.
+# Download all dependencies. Dependencies will be cached if the go.mod and go.sum files are not changed
 RUN go mod download
 
-# Copy the source from the current directory to the working directory inside the container
+# Copy the source from the current directory to the working directory inside the container.
 COPY . .
 
-# Build the application
+# Build the application.
 RUN go build -o main .
 
-# Expose port 8080 for the application
+# Use the alpine-based distribution of Go for a smaller final image.
+FROM golang:1.17-alpine
+
+# Set the working directory inside the container.
+WORKDIR /app
+
+# Copy the binary from the builder stage.
+COPY --from=builder /app/main /app/main
+
+# Expose port 8080 to the outside world.
 EXPOSE 8080
 
-# Command to run the application
-CMD ["./main"]
+# Command to run the executable.
+CMD ["/app/main"]
