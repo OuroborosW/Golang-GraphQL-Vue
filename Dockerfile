@@ -1,5 +1,5 @@
 # Use the alpine-based distribution of Go for a smaller final image.
-FROM golang:1.16 AS builder
+FROM golang:1.17 AS builder
 
 
 # Set the working directory inside the container.
@@ -16,7 +16,7 @@ COPY . .
 
 # Build the application.
 
-RUN go build -o main .
+RUN CGO_ENABLED=0 GOOS=linux go build -o main .
 
 RUN chmod +x main
 
