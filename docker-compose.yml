@@ -9,7 +9,7 @@ services:
   backend:
     build: .  # 使用当前目录作为后端项目的路径
     ports:
-      - "8081:8080"  # 后端的端口
+      - "8080:8080"  # 后端的端口
     depends_on:
       - mongodb
     environment:
