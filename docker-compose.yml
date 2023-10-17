@@ -1,23 +1,26 @@
 version: '3'
 
 services:
+  frontend:
+    build: ./path_to_frontend_project/  # 指向前端项目的路径
+    ports:
+      - "8080:8080"  # 前端的端口
+
+  backend:
+    build: .  # 使用当前目录作为后端项目的路径
+    ports:
+      - "8081:8080"  # 后端的端口
+    depends_on:
+      - mongodb
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017
+
   mongodb:
     image: mongo:latest
     volumes:
       - mongodb_data:/data/db
     ports:
       - "27017:27017"
-
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - "8080:8080"
-    depends_on:
-      - mongodb
-    environment:
-      - MONGO_URI=mongodb://mongodb:27017
 
 volumes:
   mongodb_data:
