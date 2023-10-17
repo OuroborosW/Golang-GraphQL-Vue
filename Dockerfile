@@ -1,5 +1,5 @@
 # Use the alpine-based distribution of Go for a smaller final image.
-FROM golang:1.17-alpine AS builder
+FROM golang:1.16 AS builder
 
 
 # Set the working directory inside the container.
