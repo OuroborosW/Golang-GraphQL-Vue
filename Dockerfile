@@ -29,9 +29,6 @@ WORKDIR /app
 COPY --from=builder /app/main /app/main
 RUN chmod +x /app/main
 
-# Give execute permissions to the binary.
-RUN chmod +x /app/main
-
 # Expose port 8080 to the outside world.
 EXPOSE 8080
 
