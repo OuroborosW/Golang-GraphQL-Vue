@@ -2,15 +2,14 @@
 This repository, Golang-GraphQL-Vue, contains a Golang-based backend that provides a GraphQL API for fetching state names. The data for states is stored in MongoDB.
 
 # Prerequisites
-Golang (latest version recommended)
-Docker and Docker Compose
-Git (for cloning the repository)
+Golang (latest version recommended)<br />
+Docker and Docker Compose<br />
+Git (for cloning the repository)<br />
 # Getting Started
 Clone the repository:
-bash
-Copy code
-git clone https://github.com/OuroborosW/Golang-GraphQL-Vue.git
-cd Golang-GraphQL-Vue
+```bash
+# git clone https://github.com/OuroborosW/Golang-GraphQL-Vue.git
+# cd Golang-GraphQL-Vue
 Start MongoDB with Docker:
 Make sure Docker and Docker Compose are properly installed on your system. Run the following command to start a MongoDB container:
 
