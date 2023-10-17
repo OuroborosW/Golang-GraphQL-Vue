@@ -39,7 +39,6 @@ The server will start, and the GraphQL endpoint will be available at http://loca
 **Use the GraphQL API:**
 To fetch state names, send a POST request to the GraphQL endpoint with a query like:
 ```
-graphql
 {
   search(input: "A") {
     name
@@ -48,18 +47,18 @@ graphql
 ```
 This will return all state names starting with the letter 'A'.
 
-Development
+# Development
 The main logic for the application is found within the main directory. You can expand the functionality by adding more resolvers or modifying the existing GraphQL schema. Ensure any new dependencies are added to the go.mod file.
 
-Cleanup
+# Cleanup
 To stop the MongoDB container and remove it, run:
-
+```
 bash
-Copy code
 docker-compose down
-Contributing
+```
+# Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-License
+# License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
