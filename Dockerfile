@@ -22,7 +22,7 @@ RUN chmod +x main
 
 
 # Use a minimal alpine-based distribution for a smaller final image.
-FROM alpine:latest
+FROM golang:1.17-alpine
 
 # Set the working directory inside the container.
 WORKDIR /app
