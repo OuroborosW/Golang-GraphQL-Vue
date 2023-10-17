@@ -1,5 +1,6 @@
-# Use the official Go image to create a build artifact.
-FROM golang:1.17 AS builder
+# Use the alpine-based distribution of Go for a smaller final image.
+FROM golang:1.17
+
 
 # Set the working directory inside the container.
 WORKDIR /app
