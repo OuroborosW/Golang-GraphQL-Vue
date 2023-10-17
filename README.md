@@ -1,6 +1,5 @@
-# Golang GraphQL Backend with MongoDB
-
-This repository contains a Golang-based backend that provides GraphQL API for fetching state names. The data for states is stored in MongoDB.
+## Golang GraphQL Backend with MongoDB
+This repository, Golang-GraphQL-Vue, contains a Golang-based backend that provides a GraphQL API for fetching state names. The data for states is stored in MongoDB.
 
 Prerequisites
 Golang (latest version recommended)
@@ -10,10 +9,8 @@ Getting Started
 Clone the repository:
 bash
 Copy code
-git clone https://github.com/your-github-username/golang-backend.git
-cd golang-backend
-Replace your-github-username with your actual GitHub username.
-
+git clone https://github.com/OuroborosW/Golang-GraphQL-Vue.git
+cd Golang-GraphQL-Vue
 Start MongoDB with Docker:
 Make sure Docker and Docker Compose are properly installed on your system. Run the following command to start a MongoDB container:
 
