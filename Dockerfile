@@ -16,7 +16,7 @@ COPY . .
 
 # Build the application.
 
-RUN CGO_ENABLED=0 GOOS=linux go build -o main .
+RUN go build -o main .
 
 RUN chmod +x main
 
