@@ -3,7 +3,7 @@ This repository, Golang-GraphQL-Vue, contains a Golang-based backend that provid
 
 # Prerequisites
 Golang (latest version recommended)<br />
-Docker and Docker Compose<br />
+Docker and Docker Compose and Docker Desktop<br />
 Git (for cloning the repository)<br />
 # Getting Started
 **Clone the front-end repository:**
