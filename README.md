@@ -37,6 +37,21 @@ go run *.go
 ```
 The server will start, and the GraphQL endpoint will be available at http://localhost:8080/graphql.
 
+**Run the Frontend Page:**
+Open another terminal window
+```bash
+cd "Your frontend path"
+```
+**Project setup:**
+```bash
+yarn install
+```
+
+**Compiles and hot-reloads for development:**
+```bash
+yarn serve
+```
+
 **Use the GraphQL API:**
 To fetch state names, send a POST request to the GraphQL endpoint with a query like:
 ```graphql
