@@ -12,7 +12,6 @@ import (
 )
 
 func main() {
-	fmt.Printf("Hello")
 	initDB()
 	defer client.Disconnect(context.Background())
 
