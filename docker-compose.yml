@@ -2,7 +2,7 @@ version: '3'
 
 services:
   frontend:
-    build: ./vue-frontend/  # 指向前端项目的路径
+    build: ../vue-frontend/  # 指向前端项目的路径
     ports:
       - "8080:8080"  # 前端的端口
 
