@@ -16,8 +16,9 @@ git clone https://github.com/OuroborosW/Golang-GraphQL-Vue.git
 cd Golang-GraphQL-Vue
 ```
 **Start MongoDB with Docker:**
-Make sure Docker and Docker Compose are properly installed on your system. Run the following command to start a MongoDB container:
+Make sure Docker and Docker Compose are properly installed on your system. 
 
+**Run the following command to start a MongoDB container:**
 ```bash
 docker-compose up -d
 ```
