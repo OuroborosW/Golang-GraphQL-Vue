@@ -19,26 +19,23 @@ docker-compose up -d
 ```
 **Initialize the database:**
 This step involves populating the MongoDB with the provided states.json data.
-```
-bash
+```bash
 go run initdata.go
 ```
 **Run the GraphQL server:**
 Navigate to the main directory:
-```
-bash
+```bash
 cd main
 ```
 Then run:
-```
-bash
+```bash
 go run *.go
 ```
 The server will start, and the GraphQL endpoint will be available at http://localhost:8080/graphql.
 
 **Use the GraphQL API:**
 To fetch state names, send a POST request to the GraphQL endpoint with a query like:
-```
+```graphql
 {
   search(input: "A") {
     name
@@ -52,8 +49,7 @@ The main logic for the application is found within the main directory. You can e
 
 # Cleanup
 To stop the MongoDB container and remove it, run:
-```
-bash
+```bash
 docker-compose down
 ```
 # Contributing
