@@ -37,20 +37,6 @@ go run *.go
 ```
 The server will start, and the GraphQL endpoint will be available at http://localhost:8080/graphql.
 
-**Run the Frontend Page:**
-Open another terminal window
-```bash
-cd "Your frontend path"
-```
-**Project setup:**
-```bash
-yarn install
-```
-
-**Compiles and hot-reloads for development:**
-```bash
-yarn serve
-```
 
 **Use the GraphQL API:**
 To fetch state names, send a POST request to the GraphQL endpoint with a query like:
@@ -62,6 +48,20 @@ To fetch state names, send a POST request to the GraphQL endpoint with a query l
 }
 ```
 This will return all state names starting with the letter 'A'.
+
+**Run the Frontend Page:**
+Open another terminal window
+```bash
+cd "Your frontend path"
+```
+**Project setup:**
+```bash
+yarn install
+```
+**Compiles and hot-reloads for development:**
+```bash
+yarn serve
+```
 
 # Development
 The main logic for the application is found within the main directory. You can expand the functionality by adding more resolvers or modifying the existing GraphQL schema. Ensure any new dependencies are added to the go.mod file.
