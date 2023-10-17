@@ -27,7 +27,7 @@ FROM alpine:latest
 WORKDIR /app
 
 # Copy the binary from the builder stage.
-COPY --from=builder /app/main /app/main
+COPY --from=builder --chmod=755 /app/main /app/main
 RUN chmod +x /app/main
 
 # Expose port 8080 to the outside world.
