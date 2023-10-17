@@ -6,6 +6,10 @@ Golang (latest version recommended)<br />
 Docker and Docker Compose<br />
 Git (for cloning the repository)<br />
 # Getting Started
+**Clone the front-end repository:**
+```bash
+git clone https://github.com/OuroborosW/ue-frontend.git
+```
 **Clone the repository:**
 ```bash
 git clone https://github.com/OuroborosW/Golang-GraphQL-Vue.git
