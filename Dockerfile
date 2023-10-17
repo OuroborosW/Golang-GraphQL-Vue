@@ -14,7 +14,8 @@ RUN go mod download
 COPY . .
 
 # Build the application.
-RUN go build -o /app/main .
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o main .
+
 
 # Use a minimal alpine-based distribution for a smaller final image.
 FROM alpine:latest
