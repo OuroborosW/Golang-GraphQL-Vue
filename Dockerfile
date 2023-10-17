@@ -14,7 +14,8 @@ RUN go mod download
 COPY . .
 
 # Build the application.
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o main .
+RUN go build -o main .
+RUN chmod +x main
 
 
 # Use a minimal alpine-based distribution for a smaller final image.
@@ -25,6 +26,7 @@ WORKDIR /app
 
 # Copy the binary from the builder stage.
 COPY --from=builder /app/main /app/main
+RUN chmod +x /app/main
 
 # Give execute permissions to the binary.
 RUN chmod +x /app/main
