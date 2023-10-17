@@ -17,3 +17,5 @@ RUN go build -o main .
 
 # Change the permission of the application
 RUN chmod +x main
+
+CMD ["./main"]
